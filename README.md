@@ -25,7 +25,7 @@ It indexes your drives on first install, keeps the index live with a file system
 | **Filter by type** | Chips to narrow results to Folders, Video, Audio, Images, Docs, or Archives |
 | **Right-click context menu** | Open, Open with…, Reveal in Explorer, Copy path |
 | **Open with…** | Native Windows "Open with" dialog for any file |
-| **Live index updates** | File watcher keeps the index in sync — deletions, renames, and new files update within 2 seconds |
+| **Live index updates** | File watcher keeps the index in sync - deletions, renames, and new files update within 2 seconds |
 | **Reveal in Explorer** | Opens the parent folder and scrolls to the file |
 | **System tray** | Runs silently in the background, no taskbar clutter |
 | **Light / Dark theme** | Toggle in Settings, saved across sessions |
@@ -166,11 +166,11 @@ Folders added here are skipped. LocaFetch also automatically skips:
 
 The indexer walks your configured folders using walkdir and writes file records into a SQLite database with FTS5 trigram search. The file watcher uses the notify crate to listen for changes and updates the index in real time. The frontend communicates with the Rust backend via Tauri invoke calls.
 
-- **Indexer** (indexer.rs) — walks folders, batches 500 rows per SQLite transaction
-- **FTS5 trigram** — enables substring search, falls back to LIKE for short queries
-- **File watcher** (watcher.rs) — debounces events and flushes to DB every 2 seconds; handles create, delete, rename
-- **Open with** — uses `SHOpenWithDialog` Win32 API for native Windows integration
-- **Frontend** (React + TypeScript) — dynamically resizes the window to fit content; clears on each open
+- **Indexer** (indexer.rs) - walks folders, batches 500 rows per SQLite transaction
+- **FTS5 trigram** - enables substring search, falls back to LIKE for short queries
+- **File watcher** (watcher.rs) - debounces events and flushes to DB every 2 seconds; handles create, delete, rename
+- **Open with** - uses `SHOpenWithDialog` Win32 API for native Windows integration
+- **Frontend** (React + TypeScript) - dynamically resizes the window to fit content; clears on each open
 
 ---
 
@@ -212,7 +212,7 @@ Artifacts will be at:
 | **Enter** | Open selected file |
 | **Escape** | Clear query and hide window |
 | **Ctrl + ,** | Open Settings |
-| **Right-click** | Context menu — Open with, Reveal, Copy path |
+| **Right-click** | Context menu - Open with, Reveal, Copy path |
 
 ---
 
